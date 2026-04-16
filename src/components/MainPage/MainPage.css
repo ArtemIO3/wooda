@@ -1,0 +1,141 @@
+.main-page {
+    background-color: #f3f3f3;
+    min-height: 100vh;
+}
+
+.HeaderContainer {
+    background-color: #ffffff;
+    box-shadow: 0 10px 10px rgba(0, 0, 0, 0.1);
+    position: relative;
+    z-index: 1000;    
+}
+.hero-container {
+    position: relative;
+    width: 100%;
+    display: flex;
+    justify-content: center; 
+    align-items: center;
+    margin: 20px;
+    z-index: 1;       
+}
+.image {
+    width: 86%; 
+    height: auto;
+    display: block;
+    border-radius: 8px;
+}
+
+.text-overlay {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: #ffffff;
+    text-align: center;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5); 
+    width: 70%;
+}
+.text-overlay h1 {
+    font-size: 24px;
+    margin: 0;
+}
+
+.text-overlay p {
+    font-size: 18px;
+    margin-top: 10px;
+}
+
+
+
+.AboutUs {
+    display: flex;          
+    align-items: center;    
+    justify-content: center;
+    gap: 40px;             
+    padding: 50px 20px;
+    max-width: 1200px; 
+    margin: 0 auto;
+}
+
+.about-image {
+    flex: 1;          
+    max-width: 600px;
+}
+
+.about-image img {
+    width: 100%;
+    height: auto;
+    border-radius: 4px;
+}
+
+.about-content {
+    flex: 1;              
+}
+
+
+.Category {
+  width: 100%;
+  max-width: 1200px; 
+  margin: 40px auto;
+  padding: 0 20px;
+  text-align: center;
+}
+
+.Category h2 {
+  display: inline-block;
+  background-color: #e0e0e0; 
+  text-align: center;
+  padding: 10px 0;
+  font-size: 18px;
+  font-weight: 500;
+  margin-bottom: 20px;
+  width: 50%;
+  color: #333;
+}
+
+.category-container {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px; 
+  text-align: left; 
+}
+.category-item {
+  position: relative; 
+  height: 250px;      
+  background-color: #f9f9f9;
+  cursor: pointer;
+  transition: opacity 0.2s ease;
+}
+.category-item img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+.category-label {
+  position: absolute;
+  top: 15px;        
+  left: 15px;       
+  font-size: 18px;
+  color: #333;     
+  font-weight: 500;
+  z-index: 2;
+}
+.brend-container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+    padding: 40px 20px;
+    width: 100%;
+    margin: 0 auto;
+    background-color: #ffffff;
+}
+.brend-item {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    border-radius: 4px;
+}
