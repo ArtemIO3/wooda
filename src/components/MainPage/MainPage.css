@@ -1,5 +1,6 @@
+
 .main-page {
-    background-color: #f3f3f3;
+    background-color: #f3f3f3;  
     min-height: 100vh;
 }
 
@@ -15,7 +16,7 @@
     display: flex;
     justify-content: center; 
     align-items: center;
-    margin: 20px;
+   margin: 20px 0;
     z-index: 1;       
 }
 .image {
