@@ -121,21 +121,38 @@
   font-weight: 500;
   z-index: 2;
 }
-.brend-container{
+.brend-container {
     display: flex;
-    justify-content: center;
+    justify-content: space-between;
     align-items: center;
-    gap: 20px;
-    padding: 40px 20px;
-    width: 100%;
-    margin: 0 auto;
-    background-color: #ffffff;
+    gap: 30px;
+    background: #fff;
 }
+
 .brend-item {
+    flex: 1;
     display: flex;
-    flex-direction: column;
-    justify-content: center;
+     flex-direction: column;
     align-items: center;
     text-align: center;
-    border-radius: 4px;
+    padding: 20px;
+    background: #fff;
+    border-radius: 8px;
+    transition: 0.3s;
+}
+.brend-item img {
+    width: 140px;
+    height: auto;
+    margin-bottom: 15px;
+}
+
+.brend-item p {
+    font-size: 14px;
+    color: #555;
+    line-height: 1.5;
+        max-width: 250px;
+}
+.brend-item img.brend-image {
+    width: 80px;
+    height: auto;
 }

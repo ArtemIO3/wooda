@@ -84,7 +84,7 @@ export function MainPage() {
       <p>Бренд, відомий своїми розкішними матрацами, які роблять із натуральних матеріалів з акцентом на якість та комфорт.</p>
     </div>
     <div className="brend-item">
-      <img src="/Svenska.png" alt="Бренд 2" />
+      <img  class="brend-image" src="/Svenska.png" alt="Бренд 2" />
       <p>Бренд пропонує широкий вибір меблів та товарів для дому, що поєднують стиль та функціональність.</p>  
     </div>
     <div className="brend-item">
