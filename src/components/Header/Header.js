@@ -1,87 +1,100 @@
-import './Header.css';
 import React, { useState } from 'react';
-import { MapPin, ChevronDown } from 'lucide-react';
-import { MainPage } from '../MainPage/MainPage';
+import { MapPin, ChevronDown, Heart, User, ShoppingCart } from 'lucide-react';
+import './Header.css';
 
-import { Heart, User, ShoppingCart } from 'lucide-react';
 export function Header() {
-  return <div>
-    <div className="blue-block"></div>
-    <div className="header">
-      <div className="logo">
-        <div className="menu">
-          <input type="checkbox" id="burger-checkbox" className="burger-checkbox" />
-          <label for="burger-checkbox" className="burger"></label>
-          <ul className="menu-list">
-            <li><a href={<MainPage/>} className="menu-item">Главная</a></li>
-            <li><a href="#" className="menu-item">О нас</a></li>
-            <li><a href="#" className="menu-item">Команда</a></li>
-            <li><a href="#" className="menu-item">Контакты</a></li>
-          </ul>
-        </div>
-        <p>Wooda</p>
-      </div>
-      <input className='Search' type="text" name="query" placeholder="Поиск..."></input>  
-      <Icon />
-    </div>
-  </div>
-};
+  const [menuOpen, setMenuOpen] = useState(false);
 
-export function Icon(){
-return <div className="icon-container">
-    <div className="icon-item">
-    
-         {/* Иконка Серца */}
-        <Heart color="#333" size={24} strokeWidth={1.5} />
+  return (
+    <div>
+      <div className="blue-block"></div>
+
+      <div className="header">
+
+        <div className="logo">
+          <div className="menu">
+            <button
+              className={`burger ${menuOpen ? "open" : ""}`}
+              onClick={() => setMenuOpen(!menuOpen)}
+            >
+              <span></span>
+              <span></span>
+              <span></span>
+            </button>
+
+            <ul className={`menu-list ${menuOpen ? "open" : ""}`}>
+              <li><a href="/" className="menu-item" onClick={() => setMenuOpen(false)}>Главная</a></li>
+              <li><a href="#" className="menu-item" onClick={() => setMenuOpen(false)}>О нас</a></li>
+              <li><a href="#" className="menu-item" onClick={() => setMenuOpen(false)}>Команда</a></li>
+              <li><a href="#" className="menu-item" onClick={() => setMenuOpen(false)}>Контакты</a></li>
+            </ul>
+
+          </div>
+
+          <p>Wooda</p>
+        </div>
+
+        <input className="Search" type="text" placeholder="Поиск..." />
+
+        <Icon />
+      </div>
+    </div>
+  );
+}
+
+export function Icon() {
+  return (
+    <div className="icon-container">
+
+      <div className="icon-item">
+        <Heart size={24} />
         <span>Обране</span>
       </div>
-      {/* Иконка Вход */}
+
       <div className="icon-item">
-        <User color="#333" size={24} strokeWidth={1.5} />
+        <User size={24} />
         <span>Вхід</span>
       </div>
-      {/* Иконка Корзина */}
+
       <div className="icon-item">
-         
-            <ShoppingCart color="#333" size={24} strokeWidth={1.5} />
-            <span>Кошик</span>
+        <ShoppingCart size={24} />
+        <span>Кошик</span>
       </div>
-      </div>
-};
+
+    </div>
+  );
+}
+
 export function HeaderUnder() {
   const [isOpen, setIsOpen] = useState(false);
 
   return (
     <div className="header-under-container">
-      <div 
-        className="flex items-center gap-2 cursor-pointer hover:opacity-80 transition-all"
-        style={{ display: 'flex', alignItems: 'center', cursor: 'pointer' }}
+
+      <div
         onClick={() => setIsOpen(!isOpen)}
+        style={{ display: 'flex', alignItems: 'center', gap: 6 }}
       >
         <MapPin size={18} />
-        
-        <span style={{ fontSize: '14px', fontWeight: '500', margin: '0 5px' }}>
-          Wooda Київ ТЦ Променада
-        </span>
-         <ChevronDown 
-          size={16} 
-          style={{ 
-            transform: isOpen ? 'rotate(180deg)' : 'rotate(0deg)', 
-            transition: 'transform 0.3s' 
-             
-          }} 
+        <span>Wooda Київ ТЦ Променада</span>
+        <ChevronDown
+          size={16}
+          style={{
+            transform: isOpen ? 'rotate(180deg)' : 'rotate(0deg)',
+            transition: '0.3s'
+          }}
         />
       </div>
-      <div>
-        <nav>
-          <ul className='Nav'>
-            <li><a href="#">Блог</a></li>
-            <li><a href="#">Магазини</a></li>
-            <li><a href="#">Питання-відповіді</a></li>
-            <li><a href="#">Робота</a></li>
-          </ul>
-        </nav>
-      </div>
+
+      <nav>
+        <ul className="Nav">
+          <li><a href="#">Блог</a></li>
+          <li><a href="#">Магазини</a></li>
+          <li><a href="#">Питання-відповіді</a></li>
+          <li><a href="#">Робота</a></li>
+        </ul>
+      </nav>
+
     </div>
   );
 }

@@ -1,0 +1,275 @@
+.features {
+    display: flex;
+    justify-content: space-around;
+    align-items: flex-start;
+    padding: 40px 20px;
+    background: #ffffff;
+}
+
+.feature-item {
+    max-width: 300px;
+    text-align: center;
+    color: #333;
+}
+
+.feature-item img {
+    width: 90px;
+    height: auto;
+    margin-bottom: 15px;
+}
+
+.feature-item p {
+    font-size: 14px;
+    text-align:justify;
+}
+
+.subscribe {
+    background: #f5f5f5;
+    padding: 60px 20px;
+    border-top: 1px solid #ddd;
+    border-bottom: 1px solid #ddd;
+    text-align: center;
+    font-family: Arial, sans-serif;
+}
+
+.subscribe .container {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.subscribe h2 {
+    font-size: 22px;
+    font-weight: 700;
+    margin-bottom: 20px;
+    color: #333;
+}
+
+.subscribe p {
+    font-size: 14px;
+    color: #666;
+    margin-bottom: 30px;
+    line-height: 1.6;
+}
+
+.subscribe-form {
+    display: flex;
+    gap: 15px;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.subscribe-form input {
+    padding: 15px;
+    border: none;
+    border-radius: 8px;
+    background: #ddd;
+    font-size: 14px;
+    width: 200px;
+    outline: none;
+}
+
+.subscribe-form input:nth-child(2) {
+    width: 300px;
+}
+
+.subscribe-form button {
+    padding: 15px 25px;
+    background: #1aa39a;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    font-size: 15px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.subscribe-form button:hover {
+    background: #168f87;
+}
+
+
+.footer {
+  background: #1aa3a3;
+  color: white;
+  padding: 40px 60px;
+  font-family: Arial, sans-serif;
+}
+
+.footer-top {
+  display: flex;
+  justify-content: space-between;
+  gap: 40px;
+  flex-wrap: wrap;
+}
+
+.footer-column {
+  max-width: 220px;
+}
+
+.footer-column h4 {
+  margin-bottom: 15px;
+  font-size: 16px;
+}
+
+.footer-column ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.footer-column li {
+  margin-bottom: 8px;
+  font-size: 14px;
+  cursor: pointer;
+}
+
+.footer-column li:hover {
+  text-decoration: underline;
+}
+
+.footer-column p {
+  font-size: 14px;
+  margin-bottom: 15px;
+  line-height: 1.5;
+}
+
+.footer-bottom {
+  margin-top: 40px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.payments img {
+  margin-right: 10px;
+  height: 30px;
+}
+
+.socials img {
+  margin-left: 15px;
+  cursor: pointer;
+}
+.footer-column a {
+  color: white;
+  text-decoration: none;
+  font-size: 14px;
+}
+
+.footer-column a:hover {
+  text-decoration: underline;
+}
+/* ====== TABLET (до 992px) ====== */
+@media (max-width: 992px) {
+  .features {
+    flex-wrap: wrap;
+    gap: 30px;
+  }
+
+  .feature-item {
+    max-width: 45%;
+  }
+
+  .subscribe h2 {
+    font-size: 20px;
+  }
+
+  .subscribe p {
+    font-size: 13px;
+  }
+
+  .subscribe-form input {
+    width: 180px;
+  }
+
+  .subscribe-form input:nth-child(2) {
+    width: 250px;
+  }
+}
+
+/* ====== MOBILE (до 768px) ====== */
+@media (max-width: 768px) {
+  .features {
+    flex-direction: column;
+    align-items: center;
+    gap: 25px;
+  }
+
+  .feature-item {
+    max-width: 90%;
+  }
+
+  .feature-item img {
+    width: 70px;
+  }
+
+  .subscribe {
+    padding: 40px 15px;
+  }
+
+  .subscribe h2 {
+    font-size: 18px;
+  }
+
+  .subscribe p {
+    font-size: 13px;
+  }
+
+  .subscribe-form {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .subscribe-form input {
+    width: 100%;
+    max-width: 300px;
+  }
+
+  .subscribe-form input:nth-child(2) {
+    width: 100%;
+  }
+
+  .subscribe-form button {
+    width: 100%;
+    max-width: 300px;
+  }
+
+  .footer-column {
+    max-width: 100%;
+  }
+
+  .footer-column h4 {
+    font-size: 15px;
+  }
+
+  .footer-column li,
+  .footer-column a {
+    font-size: 13px;
+  }
+}
+
+/* ====== SMALL MOBILE (до 480px) ====== */
+@media (max-width: 480px) {
+  .feature-item p {
+    font-size: 13px;
+  }
+
+  .subscribe h2 {
+    font-size: 16px;
+  }
+
+  .subscribe p {
+    font-size: 12px;
+  }
+
+  .footer {
+    padding: 25px 15px;
+  }
+
+  .payments img {
+    height: 25px;
+  }
+
+  .socials img {
+    height: 20px;
+  }
+}
