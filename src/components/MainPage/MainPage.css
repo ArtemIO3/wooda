@@ -217,43 +217,9 @@
   position: relative;
 }
 
-/* ====== TABLET (до 1024px) ====== */
 @media (max-width: 1024px) {
-
-  .AboutUs {
-    flex-direction: column;
-    text-align: center;
-  }
-
-  .about-image,
-  .about-content {
-    max-width: 100%;
-  }
-
-  .category-container {
-    grid-template-columns: repeat(2, 1fr);
-  }
-
-  .brend-container {
-    flex-wrap: wrap;
-    justify-content: center;
-  }
-
-  .brend-item {
-    flex: 0 0 45%;
-  }
-
-  .blog-list {
-    flex-direction: column;
-    align-items: center;
-  }
-
-  .blog-card {
-    width: 100%;
-  }
-
   .text-overlay h1 {
-    font-size: 20px;
+    font-size: 22px;
   }
 
   .text-overlay p {
@@ -261,15 +227,10 @@
   }
 }
 
-/* ====== MOBILE (до 768px) ====== */
 @media (max-width: 768px) {
-
-  .image {
-    width: 95%;
-  }
-
   .text-overlay {
-    width: 90%;
+    width: 95%;
+    padding: 8px;
   }
 
   .text-overlay h1 {
@@ -278,53 +239,22 @@
 
   .text-overlay p {
     font-size: 14px;
-  }
-
-  .Category h2,
-  .blogitem h2 {
-    width: 90%;
-    font-size: 18px;
-  }
-
-  .category-container {
-    grid-template-columns: repeat(1, 1fr);
-  }
-
-  .category-item {
-    height: 200px;
-  }
-
-  .brend-item {
-    flex: 0 0 100%;
-  }
-
-  .brend-item img {
-    width: 120px;
   }
 }
 
-/* ====== SMALL MOBILE (до 480px) ====== */
 @media (max-width: 480px) {
+  .text-overlay {
+    width: 95%;
+    padding: 5px;
+  }
 
   .text-overlay h1 {
-    font-size: 16px;
+    font-size: 14px;
+    line-height: 1.2;
   }
 
   .text-overlay p {
-    font-size: 13px;
-  }
-
-  .Category h2,
-  .blogitem h2 {
-    font-size: 16px;
-  }
-
-  .blog-card button {
-    width: calc(100% - 30px);
-    margin: 10px 15px;
-  }
-
-  .category-label {
-    font-size: 14px;
+    font-size: 12px;
+    margin-top: 5px;
   }
 }

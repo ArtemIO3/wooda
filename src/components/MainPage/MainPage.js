@@ -8,8 +8,6 @@ export function MainPage() {
     <main className="main-page">
       <div className="HeaderContainer">
         <Header />
-        <hr />
-        <HeaderUnder />
       </div>
 
       <div className="hero-container">
