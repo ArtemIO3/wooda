@@ -1,17 +1,19 @@
 import React, { useState } from 'react';
 import { MapPin, ChevronDown, Heart, User, ShoppingCart, X } from 'lucide-react';
 import './Header.css';
+import { Link } from 'react-router-dom';
 
 export function Header() {
   const [menuOpen, setMenuOpen] = useState(false);
 
   const categories = [
-    "Вітальня",
-    "Кухня",
-    "Спальня",
-    "Ванна",
-    "Кабінет",
-    "Двір"
+    { name: "Вітальня", path: "living-room" },
+    { name: "Кухня", path: "kitchen" },
+    { name: "Спальня", path: "bedroom" },
+    { name: "Ванна", path: "bathroom" },
+    { name: "Кабінет", path: "office" },
+    { name: "Двір", path: "yard" },
+    { name: "Стул", path: "product" }
   ];
 
   return (
@@ -31,7 +33,9 @@ export function Header() {
 
                 <div className="menu-header">
                   <div className="menu-logo-container">
-                    <p className="menu-logo-img">Wooda</p>
+                    <Link to="/" className="menu-logo-img" onClick={() => setMenuOpen(false)}>
+                      Wooda
+                    </Link>
                   </div>
                   <button className="close-button" onClick={() => setMenuOpen(false)}>
                     <X size={28} strokeWidth={1} />
@@ -39,11 +43,15 @@ export function Header() {
                 </div>
                 <hr className="menu-divider" />
                 <ul className="menu-list-items">
-                  {[...categories ].map((item, index) => (
+                  {categories.map((item, index) => (
                     <li key={index}>
-                      <a href="#" className="menu-item-link" onClick={() => setMenuOpen(false)}>
-                        {item}
-                      </a>
+                      <Link
+                        to={`/${item.path}`}
+                        className="menu-item-link"
+                        onClick={() => setMenuOpen(false)}
+                      >
+                        {item.name}
+                      </Link>
                     </li>
                   ))}
                 </ul>
@@ -53,7 +61,11 @@ export function Header() {
             {menuOpen && <div className="backdrop" onClick={() => setMenuOpen(false)}></div>}
           </div>
 
-          <p className="brand-name">Wooda</p>
+        <div className="menu-logo-container">
+                    <Link to="/" className="menu-logo-img" onClick={() => setMenuOpen(false)}>
+                      Wooda
+                    </Link>
+                  </div>
         </div>
 
         <input className="Search" type="text" placeholder="Поиск..." />
